@@ -1,64 +1,57 @@
 import Link from "next/link";
 
 export default function Home() {
-  // const card = "w-50 m-5 text-center rounded-md h-80 flex justify-center align-bottom bg-white/20";
   const card =
-    "relative text-white px-5 hover:shadow-lg flex flex-col justify-between overflow-hidden hover:bg-white/10 rounded-xl duration-500";
+    "relative text-white px-5 flex flex-col justify-between overflow-hidden duration-500 h-72 rounded-2xl";
+  const title = "text-2xl font-bold pt-10";
   const numberStyle =
-    "absolute top-0 left-0 text-gray-600 text-[140px] font-bold opacity-10";
-  const timeStyle =
-    "flex items-center text-gray-300 text-sm font-medium bg-white/10 mt-8 px-3 py-1 rounded-full";
+    "absolute top-0 left-0 text-neutral-300 text-8xl font-bold opacity-10 uppercase";
+  // const timeStyle =
+  //   "flex items-center text-gray-300 text-sm font-medium bg-white/10 mt-8 px-3 py-1 rounded-full";
 
   return (
     <>
-      {/* <div className="grid grid-cols-2">
-        <div className={`${card} `}>Equity</div>
-        <div className={`${card} `}>Fixed Income</div>
-        <div className={`${card} `}>Derivatives</div>
-        <div className={`${card} `}>Portfolio Management</div>
-      </div> */}
-      <div className="flex flex-col justify-end min-h-screen px-4 py-20 bg-stone-800">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <Link href={"/"} className={card}>
-            <span className={numberStyle}>01</span>
-            <h3 className="text-xl font-bold">upside potential</h3>
-            <p className="mt-2 text-sm text-gray-400">
-              Equity
-            </p>
-            <p className={timeStyle}>2 minutes</p>
-          </Link>
+      <div className="bg-stone-900/90 h-screen text-white justify-between flex flex-col">
+        <section className="flex gap-3 items-end justify-center my-auto">
+          <h1 className="font-medium text-2xl">loom</h1>
+          <p>by banagere</p>
+        </section>
 
-          <div className={card}>
-            <span className={numberStyle}>02</span>
-            <h3 className="text-xl font-bold">downside protection</h3>
-            <p className="mt-2 text-sm text-gray-400">
-              fixed-income
-            </p>
-            <div className={timeStyle}>
-              <span>1 minute</span>
-            </div>
-          </div>
+        <div className="flex flex-col px-10 bg-red-400/50 basis-11/12">
+          <div className="grid grid-cols-2 gap-8 my-5">
+            <Link href={"/"} className={card}>
+              <p className={numberStyle}>Equity</p>
+              <h3 className={title}>Upside Potential</h3>
+              {/* <p className="mt-2 text-sm text-gray-400">Equity</p> */}
+              {/* <p className="">2 minutes</p> */}
+            </Link>
 
-          <div className={card}>
-            <span className={numberStyle}>03</span>
-            <h3 className="text-xl font-bold">probabilities</h3>
-            <p className="mt-2 text-sm text-gray-400">
-              derivatives
-            </p>
-            <div className={timeStyle}>
-              <span>3 minutes</span>
-            </div>
-          </div>
+            <Link href={"/"} className={card}>
+              <span className={numberStyle}>Fixed Income</span>
+              <h3 className={title}>Downside Protection</h3>
+              {/* <p className="mt-2 text-sm text-gray-400">fixed-income</p>
+              <div className={timeStyle}>
+                <span>1 minute</span>
+              </div> */}
+            </Link>
 
-          <div className={card}>
-            <span className={numberStyle}>04</span>
-            <h3 className="text-xl font-bold">mathematics</h3>
-            <p className="mt-2 text-sm text-gray-400">
-              portfolio management
-            </p>
-            <div className={timeStyle}>
-              <span>2 minutes</span>
-            </div>
+            <Link href={"/"} className={card}>
+              <span className={numberStyle}>Derivatives</span>
+              <h3 className={title}>Probabilities</h3>
+              {/* <p className="mt-2 text-sm text-gray-400">derivatives</p>
+              <div className={timeStyle}>
+                <span>3 minutes</span>
+              </div> */}
+            </Link>
+
+            <Link href={"/"} className={card}>
+              <span className={numberStyle}>Portfolio Management</span>
+              <h3 className={title}>Mathematics</h3>
+              {/* <p className="mt-2 text-sm text-gray-400">portfolio management</p>
+              <div className={timeStyle}>
+                <span>2 minutes</span>
+              </div> */}
+            </Link>
           </div>
         </div>
       </div>

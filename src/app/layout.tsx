@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.className} antialiased`}>
-        <header className="flex gap-3 items-end max-w-6xl mx-auto py-2">
+        {/* <header className="flex gap-3 items-end max-w-6xl mx-auto py-2">
           <h1 className="font-medium text-2xl">loom</h1>
           <p>by banagere</p>
-        </header>
+        </header> */}
         {children}
       </body>
     </html>
