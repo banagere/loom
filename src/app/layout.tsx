@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Funnel_Display } from "next/font/google";
-
-const font = Funnel_Display({
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "loom / banagere",
@@ -18,11 +14,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`}>
-        {/* <header className="flex gap-3 items-end max-w-6xl mx-auto py-2">
-          <h1 className="font-medium text-2xl">loom</h1>
-          <p>by banagere</p>
-        </header> */}
+      <body className={`antialiased`}>
+        <header className="flex gap-3 items-end py-3 justify-center bg-black text-white">
+          {/* <Image src={logo} alt="logo" width={30} /> */}
+          <Link href={"/"} className="font-bold text-2xl">
+            loom
+          </Link>
+          <Link
+            href={"https://banagere.com"}
+            className="underline hover:opacity-70 duration-500"
+            target="_blank"
+          >
+            by banagere
+          </Link>
+        </header>
         {children}
       </body>
     </html>

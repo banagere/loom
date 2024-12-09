@@ -2,35 +2,33 @@ import Link from "next/link";
 
 export default function Home() {
   const card =
-    "relative px-5 flex flex-col justify-between overflow-hidden duration-500 h-72 rounded-2xl text-white";
-  const title = "text-2xl font-bold pt-5";
+    "relative flex flex-col justify-between overflow-hidden duration-500 h-32 rounded-xl w-[400px] border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400";
+  const title = "text-3xl font-bold h-full flex items-end p-5";
   const numberStyle =
-    "absolute top-0 left-0 text-neutral-300 text-6xl font-bold opacity-20 uppercase";
+    "absolute top-4 left-3 text-neutral-400 text-5xl font-bold opacity-20 uppercase";
   // const timeStyle =
   //   "flex items-center text-gray-300 text-sm font-medium bg-white/10 mt-8 px-3 py-1 rounded-full";
 
   return (
     <>
-      <div className="h-screen justify-between flex flex-col">
-        <section className="flex gap-3 items-end justify-center my-auto">
-          <Link href={"/"} className="font-medium text-2xl">
-            loom
-          </Link>
-          <Link
-            href={"https://banagere.com"}
-            className="underline hover:opacity-70 duration-500"
-          >
-            by banagere
-          </Link>
-        </section>
-
-        <div className="flex flex-col px-10 basis-11/12 bg-red-900/80">
-          {/* <div>Lorem ipsum</div> */}
-          <div className="grid grid-cols-4 gap-8 my-5">
+      <div className="flex flex-col">
+        <div className="flex flex-col px-10 basis-11/12 max-w-5xl mx-auto">
+          <div className="flex items-center flex-col max-w-xl mx-auto">
+            <h1 className="font-bold text-2xl text-neutral-700 bg-neutral-200 font-mono my-5 px-2">
+              finance + math + code
+            </h1>
+            {/* <p className="text-white px-5 py-2 font-medium text-center text-lg">
+              Transform raw market data into actionable insights. By applying
+              advanced modeling techniques in Python and Excel, it offers a
+              comprehensive exploration of forecasting, valuation, and risk
+              analysis methods across multiple asset classes.
+            </p> */}
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 my-5 grid-cols-1">
             <Link href={"/"} className={card}>
               <p className={numberStyle}>Upside Potential</p>
               <h3 className={title}>Equity</h3>
-              {/* <p className="mt-2 text-sm text-gray-400">Equity</p> */}
+              {/* <p className="text-sm">Equity</p> */}
               {/* <p className="">2 minutes</p> */}
             </Link>
 
