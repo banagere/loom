@@ -19,18 +19,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto py-5">
+      <div className="max-w-2xl mx-auto py-5">
         <h1 className="font-medium text-2xl text-center py-3">Projects</h1>
 
-        <Link
-          href={"/fixed-income/liquidity"}
-          className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
-        >
-          <h1 className="text-2xl font-bold flex">Liquidity</h1>
-          <h2 className="text-lg font-medium flex">
-            Find out which Indian government securities are the most liquid
-          </h2>
-        </Link>
+        <div className="flex flex-col gap-5">
+          <Link
+            href={"/fixed-income/liquidity"}
+            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
+          >
+            <h1 className="text-2xl font-bold flex">Liquidity</h1>
+            <h2 className="text-lg font-medium flex">
+              Find out which Indian government securities are the most liquid
+            </h2>
+          </Link>
+
+          <Link
+            href={"/risk/var"}
+            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
+          >
+            <h1 className="text-2xl font-bold flex">Value at Risk</h1>
+            <h2 className="text-lg font-medium flex">
+              Minimum amount of money you could lose
+            </h2>
+          </Link>
+        </div>
       </div>
     </>
   );
