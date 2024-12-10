@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className="font-medium text-2xl text-center py-3">Projects</h1>
 
         <Link
-          href={"/fixed-income/code/liquidity"}
+          href={"/fixed-income/liquidity"}
           className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
         >
           <h1 className="text-2xl font-bold flex">Liquidity</h1>

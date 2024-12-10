@@ -18,7 +18,7 @@ export default function FixedIncome() {
         <h1 className="font-medium text-2xl text-center pt-5">Fixed Income</h1>
 
         <div className="max-w-4xl mx-auto py-5">
-          <Link href={"/fixed-income/code/liquidity"} className={card}>
+          <Link href={"/fixed-income/liquidity"} className={card}>
             <h1 className={title}>Liquidity</h1>
             <h2 className="text-lg font-medium flex">
               Find out which Indian government securities are the most liquid
