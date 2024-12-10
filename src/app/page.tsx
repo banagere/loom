@@ -1,14 +1,6 @@
 import Link from "next/link";
 
 export default function Home() {
-  const card =
-    "relative flex flex-col justify-between overflow-hidden duration-500 h-32 rounded-xl w-[400px] border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400";
-  const title = "text-3xl font-bold h-full flex items-end p-5";
-  const numberStyle =
-    "absolute top-4 left-3 text-neutral-400 text-5xl font-bold opacity-20 uppercase";
-  // const timeStyle =
-  //   "flex items-center text-gray-300 text-sm font-medium bg-white/10 mt-8 px-3 py-1 rounded-full";
-
   return (
     <>
       <div className="flex flex-col">
@@ -24,43 +16,70 @@ export default function Home() {
               analysis methods across multiple asset classes.
             </p> */}
           </div>
-          <div className="grid md:grid-cols-2 gap-8 my-5 grid-cols-1">
-            <Link href={"/"} className={card}>
-              <p className={numberStyle}>Upside Potential</p>
-              <h3 className={title}>Equity</h3>
-              {/* <p className="text-sm">Equity</p> */}
-              {/* <p className="">2 minutes</p> */}
-            </Link>
-
-            <Link href={"/fixed-income"} className={card}>
-              <span className={numberStyle}>Downside Protection</span>
-              <h3 className={title}>Fixed Income</h3>
-              {/* <p className="mt-2 text-sm text-gray-400">fixed-income</p>
-              <div className={timeStyle}>
-                <span>1 minute</span>
-              </div> */}
-            </Link>
-
-            <Link href={"/"} className={card}>
-              <span className={numberStyle}>Probability</span>
-              <h3 className={title}>Derivatives</h3>
-              {/* <p className="mt-2 text-sm text-gray-400">derivatives</p>
-              <div className={timeStyle}>
-                <span>3 minutes</span>
-              </div> */}
-            </Link>
-
-            <Link href={"/"} className={card}>
-              <span className={numberStyle}>Mathematics</span>
-              <h3 className={title}>Portfolio Management</h3>
-              {/* <p className="mt-2 text-sm text-gray-400">portfolio management</p>
-              <div className={timeStyle}>
-                <span>2 minutes</span>
-              </div> */}
-            </Link>
-          </div>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto py-5">
+        <h1 className="font-medium text-2xl text-center py-3">Projects</h1>
+
+        <Link
+          href={"/fixed-income/code/liquidity"}
+          className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
+        >
+          <h1 className="text-2xl font-bold flex">Liquidity</h1>
+          <h2 className="text-lg font-medium flex">
+            Find out which Indian government securities are the most liquid
+          </h2>
+        </Link>
       </div>
     </>
   );
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const section = () => {
+  const card =
+    "relative flex flex-col justify-between overflow-hidden duration-500 h-32 rounded-xl w-[400px] border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400";
+  const title = "text-3xl font-bold h-full flex items-end p-5";
+  const numberStyle =
+    "absolute top-4 left-3 text-neutral-400 text-5xl font-bold opacity-20 uppercase";
+  // const timeStyle =
+  //   "flex items-center text-gray-300 text-sm font-medium bg-white/10 mt-8 px-3 py-1 rounded-full";
+  return (
+    <div className="grid md:grid-cols-2 gap-8 my-5 grid-cols-1">
+      <Link href={"/"} className={card}>
+        <p className={numberStyle}>Upside Potential</p>
+        <h3 className={title}>Equity</h3>
+        {/* <p className="text-sm">Equity</p> */}
+        {/* <p className="">2 minutes</p> */}
+      </Link>
+
+      <Link href={"/fixed-income"} className={card}>
+        <span className={numberStyle}>Downside Protection</span>
+        <h3 className={title}>Fixed Income</h3>
+        {/* <p className="mt-2 text-sm text-gray-400">fixed-income</p>
+    <div className={timeStyle}>
+      <span>1 minute</span>
+    </div> */}
+      </Link>
+
+      <Link href={"/"} className={card}>
+        <span className={numberStyle}>Probability</span>
+        <h3 className={title}>Derivatives</h3>
+        {/* <p className="mt-2 text-sm text-gray-400">derivatives</p>
+    <div className={timeStyle}>
+      <span>3 minutes</span>
+    </div> */}
+      </Link>
+
+      <Link href={"/"} className={card}>
+        <span className={numberStyle}>Mathematics</span>
+        <h3 className={title}>Portfolio Management</h3>
+        {/* <p className="mt-2 text-sm text-gray-400">portfolio management</p>
+    <div className={timeStyle}>
+      <span>2 minutes</span>
+    </div> */}
+      </Link>
+    </div>
+  );
+};
