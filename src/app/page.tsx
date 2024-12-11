@@ -42,6 +42,30 @@ export default function Home() {
               Minimum amount of money you could lose
             </h2>
           </Link>
+
+          <Link
+            href={"/derivatives/bsm"}
+            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
+          >
+            <h1 className="text-2xl font-bold flex">
+              Black-Scholes-Merton Model
+            </h1>
+            <h2 className="text-lg font-medium flex">
+              Option pricing in continuous time
+            </h2>
+          </Link>
+
+          <Link
+            href={"/derivatives/binomial"}
+            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
+          >
+            <h1 className="text-2xl font-bold flex">
+              Binomial Options Pricing Model
+            </h1>
+            <h2 className="text-lg font-medium flex">
+              Option pricing through lattice model
+            </h2>
+          </Link>
         </div>
       </div>
     </>

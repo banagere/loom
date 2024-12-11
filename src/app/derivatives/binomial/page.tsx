@@ -10,28 +10,29 @@ export default function Liquidity() {
   return (
     <>
       <div className="flex flex-col max-w-3xl mx-auto">
-        <h1 className="font-semibold text-3xl pt-5 py-3">Value at Risk</h1>
+        <h1 className="font-semibold text-3xl pt-5 py-3">
+          Binomial options pricing model
+        </h1>
         <p className="font-medium max-w-xl">
-          Quantify the amount of money you could lose in a given day/year. This
-          number helps you understand your risk exposure, and guides you to take
-          necessary decision on whether to change your position size.
+          Compute the call and put prices of European-style options by
+          determining the up/down price movements and calculating the option
+          price using risk-neutral probabilities
         </p>
       </div>
 
       <div className="max-w-3xl mx-auto">
-        {/* <h1 className="font-medium text-xl py-3">Requirements:</h1> */}
         <div>
           <div className="flex gap-3 items-center pt-5">
             <p className={required}>Python</p>
-            <p className={required}>Numpy</p>
-            <p className={required}>Scipy</p>
-            <p className={required}>Matplotlib</p>
-            {/* <p className={required}>CSV</p> */}
+            <p className={required}>Math</p>
           </div>
           <div className="pt-5">
-            {/* <h1 className="font-medium text-xl py-3">Download:</h1> */}
             <div className="flex gap-5">
-              <Link href={""} className={download} download>
+              <Link
+                href={"/code/derivatives/binomial/code.py"}
+                className={download}
+                download
+              >
                 <p className="flex items-center gap-px font-medium">
                   Code.py
                   <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -64,23 +65,20 @@ export default function Liquidity() {
         </div>
 
         <div className="bg-black rounded-xl p-5 text-yellow-400 mt-5 flex flex-col">
-          <code className="font-mono text-pink-400 pb-2">
-            Code includes calculating:
+          <code className="font-mono text-pink-400 pb-2">Compute:</code>
+          <code className="font-mono">
+            1. Risk-neutral probabilities for an up or down move in the stock
+            price
           </code>
           <code className="font-mono">
-            1. Portfolio VaR at 95% confidence (Statistical & Monte Carlo
-            methods){" "}
+            2. Call and put option prices by averaging across 100 steps in the
+            stock price
           </code>
-          <code className="font-mono">
-            2. Conditional VaR (when the VaR gets breached)
-          </code>
-          <code className="font-mono">3. Semi VaR</code>
-          <code className="font-mono">4. Maximum drawdown</code>
         </div>
 
         <div className="pt-2">
           <p className="text-sm font-medium text-neutral-700">
-            Last updated: 10th December 2024
+            Last updated: 11th December 2024
           </p>
         </div>
       </div>
