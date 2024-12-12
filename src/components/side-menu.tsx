@@ -3,6 +3,8 @@ import Link from "next/link";
 import * as React from "react";
 
 export default function Sidebar() {
+  const currentYear = new Date().getFullYear();
+
   // const router = useRouter();
   // const { data } = useViewerQuery();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -39,7 +41,6 @@ export default function Sidebar() {
   return (
     <>
       <div className="flex flex-col h-screen w-64 bg-neutral-100 shadow-inner border border-neutral-200">
-        {/* Profile Section */}
         <div className="flex items-center px-5 py-4">
           <div className="ml-3">
             <h2 className="font-bold text-2xl">loom</h2>
@@ -47,7 +48,6 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {/* Navigation Menu */}
         <nav className="px-5 py-6 space-y-3 ml-3">
           <Link href="/" className={items}>
             Home
@@ -57,7 +57,6 @@ export default function Sidebar() {
           </Link> */}
         </nav>
 
-        {/* Social Links */}
         <nav className="px-5 py-6 space-y-3 ml-3">
           <h2 className="tracking-wider text-sm text-black">Online</h2>
           <Link
@@ -74,6 +73,10 @@ export default function Sidebar() {
           >
             LinkedIn
           </Link>
+        </nav>
+
+        <nav className="flex text-sm text-neutral-500 font-medium px-5 ml-3 items-end h-screen py-5">
+          © {currentYear} Banagere.
         </nav>
       </div>
 
