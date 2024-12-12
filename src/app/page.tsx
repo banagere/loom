@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 export default function Home() {
-  const link =
-    "flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5";
-  const title = "text-lg font-semibold flex";
-  const subtitle = "";
+  const link = "duration-500 hover:opacity-50";
+  // const link =
+  //   "flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5";
+  const title = "text-lg font-medium flex";
+  const subtitle = "text-neutral-600";
 
   return (
     <>
@@ -20,8 +21,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto py-5">
-          <h1 className="font-medium text-xl py-3">Projects</h1>
+        <div className="max-w-2xl mx-auto py-5 pt-10">
+          <h1 className="font-medium text-2xl py-3">Projects</h1>
 
           <div className="flex flex-col gap-5">
             <Link href={"/fixed-income/liquidity"} className={link}>

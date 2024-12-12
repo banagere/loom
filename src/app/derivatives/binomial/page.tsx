@@ -3,30 +3,30 @@ import Link from "next/link";
 
 export default function Liquidity() {
   const required =
-    "bg-neutral-800 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md";
+    "bg-neutral-800 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md text-sm";
   const download =
-    "bg-blue-700 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md";
+    "bg-blue-700 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md text-sm";
 
   return (
     <>
-      <div className="flex flex-col max-w-3xl mx-auto">
-        <h1 className="font-semibold text-3xl pt-5 py-3">
-          Binomial options pricing model
-        </h1>
-        <p className="font-medium max-w-xl">
-          Compute the call and put prices of European-style options by
-          determining the up/down price movements and calculating the option
-          price using risk-neutral probabilities
-        </p>
-      </div>
+      <div className="flex flex-col max-w-2xl mx-auto">
+        <div className="pt-20">
+          <h1 className="font-semibold text-2xl pb-2">
+            Binomial options pricing model
+          </h1>
+          <p className="font-medium text-neutral-700 max-w-xl">
+            Compute the call and put prices of European-style options by
+            determining the up/down price movements and calculating the option
+            price using risk-neutral probabilities.
+          </p>
+        </div>
 
-      <div className="max-w-3xl mx-auto">
         <div>
-          <div className="flex gap-3 items-center pt-5">
+          <div className="flex gap-3 items-center pt-3">
             <p className={required}>Python</p>
             <p className={required}>Math</p>
           </div>
-          <div className="pt-5">
+          <div className="pt-3">
             <div className="flex gap-5">
               <Link
                 href={"/code/derivatives/binomial/code.py"}
