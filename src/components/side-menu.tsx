@@ -40,7 +40,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="flex flex-col h-screen w-64 bg-neutral-100 shadow-inner border border-neutral-200">
+      <div className="flex flex-col h-screen w-60 bg-neutral-100 shadow-inner border border-neutral-200">
         <div className="flex items-center px-5 py-4">
           <div className="ml-3">
             <h2 className="font-bold text-2xl">loom</h2>
@@ -59,6 +59,9 @@ export default function Sidebar() {
 
         <nav className="px-5 py-6 space-y-3 ml-3">
           <h2 className="tracking-wider text-sm text-black">Online</h2>
+          <Link href="https://banagere.com/" className={items} target="_blank">
+            Banagere
+          </Link>
           <Link
             href="https://github.com/banagere/loom"
             className={items}

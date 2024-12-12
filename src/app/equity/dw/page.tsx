@@ -1,6 +1,7 @@
 import Link from "next/link";
+// import { DownloadIcon } from "@radix-ui/react-icons";
 
-export default function Liquidity() {
+export default function DurbinWatson() {
   const required =
     "bg-neutral-800 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md text-sm";
   const download =
@@ -8,27 +9,28 @@ export default function Liquidity() {
 
   return (
     <>
-      <div className="flex flex-col max-w-2xl mx-auto">
+      <div className="flex flex-col max-w-3xl mx-auto">
         <div className="pt-20">
-          <h1 className="font-semibold text-2xl pb-2">Value at Risk</h1>
+          <h1 className="font-semibold text-2xl pb-2">Durbin Watson</h1>
           <p className="font-medium text-neutral-700 max-w-xl">
-            Quantify the amount of money you could lose in a given day/year.
-            This number helps you understand your risk exposure, and guides you
-            to take necessary decision on whether to change your position size.
+            Unlike equities, fixed-income securities are more prone to severe
+            liquidity risk. It impacts buying as well as selling. Not
+            considering liquidity when trading fixed-income securities can
+            negatively affect your returns.
           </p>
         </div>
 
         <div>
           <div className="flex gap-3 items-center pt-3">
             <p className={required}>Python</p>
+            <p className={required}>yFinance</p>
             <p className={required}>Numpy</p>
-            <p className={required}>Scipy</p>
-            <p className={required}>Matplotlib</p>
+            <p className={required}>statsmodels</p>
           </div>
           <div className="pt-3">
             <div className="flex gap-5">
               <Link
-                href={"/code/risk/var/code.py"}
+                href={"/code/equity/dw/code.py"}
                 className={download}
                 download
               >
@@ -65,16 +67,19 @@ export default function Liquidity() {
 
         <div className="bg-black rounded-xl p-5 text-yellow-400 mt-5 flex flex-col">
           <code className="font-mono text-pink-400 pb-2">
-            Code includes calculating:
+            Code includes analysing:
           </code>
           <code className="font-mono">
-            1. Portfolio VaR at 95% confidence (Statistical & Monte Carlo
-            methods){" "}
+            1. If the DW is ≈ 2, there is no serial correlation
           </code>
           <code className="font-mono">
-            2. Conditional VaR (when the VaR gets breached)
+            2. If the DW is less than 1.5, there is strong positive serial
+            correlation
           </code>
-          <code className="font-mono">3. Maximum drawdown</code>
+          <code className="font-mono">
+            3. If the DW is more than 2.5, there is strong negative serial
+            correlation
+          </code>
         </div>
 
         <div className="pt-2">

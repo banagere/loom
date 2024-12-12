@@ -48,6 +48,13 @@ export default function Home() {
               <h1 className={title}>Binomial Options Pricing Model</h1>
               <h2 className={subtitle}>Option pricing through lattice model</h2>
             </Link>
+
+            <Link href={"/equity/dw"} className={link}>
+              <h1 className={title}>Durbin Watson</h1>
+              <h2 className={subtitle}>
+                Test if the price returns are serially correlated
+              </h2>
+            </Link>
           </div>
         </div>
       </div>
