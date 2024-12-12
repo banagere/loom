@@ -1,71 +1,53 @@
 import Link from "next/link";
 
 export default function Home() {
+  const link =
+    "flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5";
+  const title = "text-lg font-semibold flex";
+  const subtitle = "";
+
   return (
     <>
-      <div className="flex flex-col">
-        <div className="flex flex-col px-10 basis-11/12 max-w-5xl mx-auto">
-          <div className="flex items-center flex-col max-w-xl mx-auto">
-            <h1 className="font-bold text-2xl text-neutral-700 bg-neutral-200 font-mono my-5 px-2">
-              finance + math + code
-            </h1>
-            {/* <p className="text-white px-5 py-2 font-medium text-center text-lg">
-              Transform raw market data into actionable insights. By applying
-              advanced modeling techniques in Python and Excel, it offers a
-              comprehensive exploration of forecasting, valuation, and risk
-              analysis methods across multiple asset classes.
-            </p> */}
-          </div>
+      <div className="max-w-2xl mx-auto">
+        <div className="pt-20">
+          <h1 className="font-bold text-2xl text-neutral-200 font-mono my-5 bg-neutral-700 px-2">
+            finance + math + code
+          </h1>
+          <p className="font-medium text-neutral-700">
+            Developing this site as a digital repository for my research. My
+            idea is to include code, books, PDFs, research papers and Github
+            repos — that I can come back to.
+          </p>
         </div>
-      </div>
 
-      <div className="max-w-2xl mx-auto py-5">
-        <h1 className="font-medium text-2xl text-center py-3">Projects</h1>
+        <div className="max-w-2xl mx-auto py-5">
+          <h1 className="font-medium text-xl py-3">Projects</h1>
 
-        <div className="flex flex-col gap-5">
-          <Link
-            href={"/fixed-income/liquidity"}
-            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
-          >
-            <h1 className="text-2xl font-bold flex">Liquidity</h1>
-            <h2 className="text-lg font-medium flex">
-              Find out which Indian government securities are the most liquid
-            </h2>
-          </Link>
+          <div className="flex flex-col gap-5">
+            <Link href={"/fixed-income/liquidity"} className={link}>
+              <h1 className={title}>Liquidity</h1>
+              <h2 className={subtitle}>
+                Find out which Indian government securities are the most liquid
+              </h2>
+            </Link>
 
-          <Link
-            href={"/risk/var"}
-            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
-          >
-            <h1 className="text-2xl font-bold flex">Value at Risk</h1>
-            <h2 className="text-lg font-medium flex">
-              Minimum amount of money you could lose
-            </h2>
-          </Link>
+            <Link href={"/risk/var"} className={link}>
+              <h1 className={title}>Value at Risk</h1>
+              <h2 className={subtitle}>
+                Minimum amount of money you could lose
+              </h2>
+            </Link>
 
-          <Link
-            href={"/derivatives/bsm"}
-            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
-          >
-            <h1 className="text-2xl font-bold flex">
-              Black-Scholes-Merton Model
-            </h1>
-            <h2 className="text-lg font-medium flex">
-              Option pricing in continuous time
-            </h2>
-          </Link>
+            <Link href={"/derivatives/bsm"} className={link}>
+              <h1 className={title}>Black-Scholes-Merton Model</h1>
+              <h2 className={subtitle}>Option pricing in continuous time</h2>
+            </Link>
 
-          <Link
-            href={"/derivatives/binomial"}
-            className="flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5"
-          >
-            <h1 className="text-2xl font-bold flex">
-              Binomial Options Pricing Model
-            </h1>
-            <h2 className="text-lg font-medium flex">
-              Option pricing through lattice model
-            </h2>
-          </Link>
+            <Link href={"/derivatives/binomial"} className={link}>
+              <h1 className={title}>Binomial Options Pricing Model</h1>
+              <h2 className={subtitle}>Option pricing through lattice model</h2>
+            </Link>
+          </div>
         </div>
       </div>
     </>
