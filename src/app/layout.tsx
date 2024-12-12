@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
+import Sidebar from "@/components/side-menu";
 
 export const metadata: Metadata = {
   title: "loom / banagere",
@@ -14,21 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <header className="flex gap-3 items-end py-3 justify-center bg-black text-white">
-          {/* <Image src={logo} alt="logo" width={30} /> */}
-          <Link href={"/"} className="font-bold text-2xl">
-            loom
-          </Link>
-          <Link
-            href={"https://banagere.com"}
-            className="underline hover:opacity-70 duration-500"
-            target="_blank"
-          >
-            by banagere
-          </Link>
-        </header>
-        {children}
+      <body className="antialiased">
+        <div className="flex h-screen">
+          <Sidebar />
+
+          <main className="flex-1 px-5 shadow-xl">{children}</main>
+        </div>
       </body>
     </html>
   );
