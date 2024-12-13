@@ -55,6 +55,13 @@ export default function Home() {
                 Test if the price returns are serially correlated
               </h2>
             </Link>
+
+            <Link href={"/risk/garch"} className={link}>
+              <h1 className={title}>GARCH</h1>
+              <h2 className={subtitle}>
+                Understand the volatility of price returns
+              </h2>
+            </Link>
           </div>
         </div>
       </div>

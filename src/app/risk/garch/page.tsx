@@ -1,7 +1,6 @@
 import Link from "next/link";
-// import { DownloadIcon } from "@radix-ui/react-icons";
 
-export default function DurbinWatson() {
+export default function Liquidity() {
   const required =
     "bg-neutral-800 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md text-sm";
   const download =
@@ -9,14 +8,14 @@ export default function DurbinWatson() {
 
   return (
     <>
-      <div className="flex flex-col max-w-3xl mx-auto">
+      <div className="flex flex-col max-w-2xl mx-auto">
         <div className="pt-20">
-          <h1 className="font-semibold text-2xl pb-2">Durbin Watson</h1>
+          <h1 className="font-semibold text-2xl pb-2">GARCH</h1>
           <p className="font-medium text-neutral-700 max-w-xl">
-            Unlike equities, fixed-income securities are more prone to severe
-            liquidity risk. It impacts buying as well as selling. Not
-            considering liquidity when trading fixed-income securities can
-            negatively affect your returns.
+            Residuals of price returns are serially correlated, indicating
+            volatility clustering. To test for the volatility of it, we use the
+            GARCH (Generalized Autoregressive Conditional Heteroskedasticity)
+            technique, which quantifies the relationship between volatilities.
           </p>
         </div>
 
@@ -24,13 +23,13 @@ export default function DurbinWatson() {
           <div className="flex gap-3 items-center pt-3">
             <p className={required}>Python</p>
             <p className={required}>yFinance</p>
-            <p className={required}>Numpy</p>
-            <p className={required}>statsmodels</p>
+            <p className={required}>ARCH</p>
+            <p className={required}>Matplotlib</p>
           </div>
           <div className="pt-3">
             <div className="flex gap-5">
               <Link
-                href={"/code/equity/dw/code.py"}
+                href={"/code/risk/garch/code.py"}
                 className={download}
                 download
               >
@@ -66,25 +65,13 @@ export default function DurbinWatson() {
         </div>
 
         <div className="bg-black rounded-xl p-5 text-yellow-400 mt-5 flex flex-col">
-          <code className="font-mono text-pink-400 pb-2">
-            Check for serial correlation:
-          </code>
-          <code className="font-mono">
-            1. If the DW is ≈ 2, there is no serial correlation
-          </code>
-          <code className="font-mono">
-            2. If the DW is less than 1.5, there is strong positive serial
-            correlation
-          </code>
-          <code className="font-mono">
-            3. If the DW is more than 2.5, there is strong negative serial
-            correlation
-          </code>
+          <code className="font-mono text-pink-400 pb-2">Test for:</code>
+          <code className="font-mono">1. GARCH and plot it.</code>
         </div>
 
         <div className="pt-2">
           <p className="text-sm font-medium text-neutral-700">
-            Last updated: 12th December 2024
+            Last updated: 13th December 2024
           </p>
         </div>
       </div>
