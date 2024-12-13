@@ -52,9 +52,9 @@ export default function Sidebar() {
           <Link href="/" className={items}>
             Home
           </Link>
-          {/* <Link href="/projects" className={items}>
-            Projects
-          </Link> */}
+          <Link href="/youtube" className={items}>
+            YouTube
+          </Link>
         </nav>
 
         <nav className="px-5 py-6 space-y-3 ml-3">
