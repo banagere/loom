@@ -55,6 +55,12 @@ export default function Sidebar() {
           <Link href="/youtube" className={items}>
             YouTube
           </Link>
+          <Link href="/podcast" className={items}>
+            Podcast
+          </Link>
+          <Link href="/people" className={items}>
+            People
+          </Link>
         </nav>
 
         <nav className="px-5 py-6 space-y-3 ml-3">

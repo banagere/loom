@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <div className="max-w-2xl mx-auto">
         <div className="pt-20">
-          <h1 className="font-bold text-2xl text-neutral-200 font-mono my-5 bg-neutral-700 px-2">
+          <h1 className="font-bold text-2xl text-neutral-200 font-mono bg-neutral-700 px-2">
             finance + math + code
           </h1>
-          <p className="font-medium text-neutral-700">
+          <p className="font-medium text-neutral-700 pt-2">
             Developing this site as a digital repository for my research. My
             idea is to include code, books, PDFs, research papers and Github
             repos — that I can come back to.
