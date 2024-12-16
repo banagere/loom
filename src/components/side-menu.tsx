@@ -52,6 +52,9 @@ export default function Sidebar() {
           <Link href="/" className={items}>
             Home
           </Link>
+          <Link href="/course" className={items}>
+            Course
+          </Link>
           <Link href="/youtube" className={items}>
             YouTube
           </Link>
