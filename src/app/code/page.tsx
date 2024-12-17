@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function People() {
+export default function Code() {
   const link = "duration-500 hover:opacity-50";
   // const link =
   //   "flex flex-col duration-500 h-24 justify-around rounded-xl border-neutral-300 border shadow-md hover:shadow-lg hover:border-neutral-400 p-5";
@@ -11,11 +11,11 @@ export default function People() {
     <>
       <div className="max-w-2xl mx-auto">
         <div className="pt-20">
-          <h1 className="font-bold text-2xl text-neutral-200 font-mono bg-green-700 px-2">
-            People
+          <h1 className="font-bold text-2xl text-neutral-200 font-mono bg-blue-700 px-2">
+            Code
           </h1>
           <p className="font-medium text-neutral-700 pt-2">
-            Stalwarts of this field
+            Fork these repositories!
           </p>
         </div>
 
@@ -24,21 +24,27 @@ export default function People() {
 
           <div className="flex flex-col gap-5">
             <Link
-              href={"https://linktr.ee/paleologo"}
+              href={"https://github.com/LechGrzelak/QuantFinanceBook"}
               className={link}
               target="_blank"
             >
-              <h1 className={title}>Giuseppe Paleologo</h1>
-              <h2 className={subtitle}>Quant Researcher</h2>
+              <h1 className={title}>Lech Grzelak — QuantFinanceBook</h1>
+              <h2 className={subtitle}>Quantitative Finance book</h2>
             </Link>
 
             <Link
-              href={"https://compfinance.ddns.net/wordpress/"}
+              href={
+                "https://github.com/LechGrzelak/Computational-Finance-Course"
+              }
               className={link}
               target="_blank"
             >
-              <h1 className={title}>Lech Grzelak</h1>
-              <h2 className={subtitle}>Quant Researcher</h2>
+              <h1 className={title}>
+                Lech Grzelak — Computational-Finance-Course
+              </h1>
+              <h2 className={subtitle}>
+                Materials for the course of Computational Finance
+              </h2>
             </Link>
           </div>
         </div>
