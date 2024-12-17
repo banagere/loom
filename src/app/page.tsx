@@ -50,9 +50,16 @@ export default function Home() {
             </Link>
 
             <Link href={"/equity/dw"} className={link}>
-              <h1 className={title}>Durbin Watson</h1>
+              <h1 className={title}>Durbin Watson Test</h1>
               <h2 className={subtitle}>
                 Test if the price returns are serially correlated
+              </h2>
+            </Link>
+
+            <Link href={"/equity/adf"} className={link}>
+              <h1 className={title}>Augmented Dickey Fuller Test</h1>
+              <h2 className={subtitle}>
+                Test if the price returns have unit root
               </h2>
             </Link>
 
