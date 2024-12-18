@@ -75,6 +75,13 @@ export default function Sidebar() {
             Banagere
           </Link>
           <Link
+            href="mailto:banagere.ravi@gmail.com"
+            className={items}
+            target="_blank"
+          >
+            Mail
+          </Link>
+          <Link
             href="https://github.com/banagere/loom"
             className={items}
             target="_blank"
