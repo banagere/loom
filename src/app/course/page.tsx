@@ -37,6 +37,17 @@ export default function Course() {
                 Learn to build a portfolio from scratch
               </h2>
             </Link>
+
+            <Link
+              href={
+                "https://www.youtube.com/playlist?list=PLLLuxp_C798FgdhHllQ8pvzUv-_D1PhF0"
+              }
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>Andy Duncan — Learn Finance C++</h1>
+              <h2 className={subtitle}>Basic C++ in finance application</h2>
+            </Link>
           </div>
         </div>
       </div>

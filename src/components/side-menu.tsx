@@ -35,20 +35,21 @@ export default function Sidebar() {
     },
   ];
 
-  const items =
-    "flex items-center space-x-3 text-gray-800 hover:text-blue-600 font-medium";
+  const items = "hover:bg-neutral-200 px-4 py-1 rounded-lg duration-500";
+  // const items =
+  //   "flex items-center space-x-3 text-gray-800 hover:text-blue-600 font-medium";
 
   return (
     <>
       <div className="flex flex-col h-screen w-60 bg-neutral-100 shadow-inner border border-neutral-200">
         <div className="flex items-center px-5 py-4">
           <div className="ml-3">
-            <h2 className="font-bold text-2xl">loom</h2>
+            <h2 className="font-bold text-2xl">Loom</h2>
             <p className="text-sm text-gray-600">By Banagere</p>
           </div>
         </div>
 
-        <nav className="px-5 py-6 space-y-3 ml-3">
+        <nav className="flex flex-col gap-y-1.5 m-4 pt-5">
           <Link href="/" className={items}>
             Home
           </Link>
@@ -69,8 +70,7 @@ export default function Sidebar() {
           </Link>
         </nav>
 
-        <nav className="px-5 py-6 space-y-3 ml-3">
-          <h2 className="tracking-wider text-sm text-black">Online</h2>
+        <nav className="flex flex-col gap-y-1.5 m-4 pt-5">
           <Link href="https://banagere.com/" className={items} target="_blank">
             Banagere
           </Link>
