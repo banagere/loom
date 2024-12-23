@@ -69,6 +69,11 @@ export default function Home() {
                 Understand the volatility of price returns
               </h2>
             </Link>
+
+            <Link href={"/fixed-income/yield-curve-mc"} className={link}>
+              <h1 className={title}>Yield Curve Shifts</h1>
+              <h2 className={subtitle}>Simulate shifting of yield curve</h2>
+            </Link>
           </div>
         </div>
       </div>

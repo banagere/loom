@@ -11,7 +11,7 @@ export default function People() {
     <>
       <div className="max-w-2xl mx-auto">
         <div className="pt-20">
-          <h1 className="font-bold text-2xl text-neutral-200 font-mono bg-green-700 px-2">
+          <h1 className="font-bold text-2xl text-neutral-200 bg-green-700 px-2">
             People
           </h1>
           <p className="font-medium text-neutral-700 pt-2">
