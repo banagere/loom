@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
-import image from "../../../../public/code/fixed-income/yield-curve-mc/image.png";
+import Image from "next/image";
+import image from "../../../../public/code/fixed-income/convexity/image.png";
 
-export default function Liquidity() {
+export default function Convexity() {
   const required =
     "bg-neutral-800 text-neutral-200 px-3 py-1.5 rounded-full font-medium shadow-md text-sm";
   const download =
@@ -12,12 +12,10 @@ export default function Liquidity() {
     <>
       <div className="flex flex-col max-w-3xl mx-auto">
         <div className="pt-20">
-          <h1 className="font-semibold text-2xl pb-2">Yield Curve Shifts</h1>
+          <h1 className="font-semibold text-2xl pb-2">Convexity</h1>
           <p className="font-medium text-neutral-700 max-w-xl">
-            What if the yield curve shifts? That&apos;s what we&apos;re trying
-            to compute here. Yield shifting is one of risks in fixed-income
-            investments. Simulating the shifting, can help us understand the
-            risk.
+            How sensitive is the bond to interest rate changes? That is where
+            the calculation of duration and convexity helps.
           </p>
         </div>
 
@@ -30,7 +28,7 @@ export default function Liquidity() {
           <div className="pt-3">
             <div className="flex gap-5">
               <Link
-                href={"/code/fixed-income/yield-curve-mc/code.py"}
+                href={"/code/fixed-income/convexity/code.py"}
                 className={download}
                 download
               >
@@ -66,10 +64,11 @@ export default function Liquidity() {
         </div>
 
         <div className="bg-black rounded-xl p-5 text-yellow-400 mt-5 flex flex-col">
-          <code className="font-mono text-pink-400 pb-2">Simulate:</code>
-          <code className="font-mono">1. The shifting of yield curves</code>
+          <code className="font-mono text-pink-400 pb-2">Calculate:</code>
+          <code className="font-mono">1. Bond price</code>
+          <code className="font-mono">2. Duration and Convexity</code>
           <code className="font-mono">
-            2. Using the monte carlo simulation method
+            3. Shift the interest rate ± 3% to find price sensitivity
           </code>
         </div>
 
@@ -78,7 +77,7 @@ export default function Liquidity() {
           <Image src={image} alt="" width={1000} />
         </div>
 
-        <div className="pt-2">
+        <div className="py-2">
           <p className="text-sm font-medium text-neutral-700">
             Last updated: 23rd December 2024
           </p>

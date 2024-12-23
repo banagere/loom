@@ -74,6 +74,11 @@ export default function Home() {
               <h1 className={title}>Yield Curve Shifts</h1>
               <h2 className={subtitle}>Simulate shifting of yield curve</h2>
             </Link>
+
+            <Link href={"/fixed-income/convexity"} className={link}>
+              <h1 className={title}>Convexity</h1>
+              <h2 className={subtitle}>Second-order risk metric</h2>
+            </Link>
           </div>
         </div>
       </div>
