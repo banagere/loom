@@ -33,6 +33,58 @@ export default function YouTube() {
             </Link>
           </div>
         </div>
+
+        <div className="max-w-2xl mx-auto py-5 pt-10">
+          <h1 className="font-medium text-2xl py-3">Videos</h1>
+
+          <div className="flex flex-col gap-5">
+            <Link
+              href={"https://www.youtube.com/watch?v=-k-Yk4Ubhos"}
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>
+                One of the biggest wealth transfers in US history is happening
+                RIGHT NOW. Are you aware?
+              </h1>
+              <h2 className={subtitle}>Alexandra Fasulo</h2>
+            </Link>
+
+            <Link
+              href={"https://www.youtube.com/watch?v=k81cDTgyBOQ"}
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>
+                Wall Street&apos;s Dangerous New Obsession With Farmland
+              </h1>
+              <h2 className={subtitle}>How Money Works</h2>
+            </Link>
+
+            <Link
+              href={"https://www.youtube.com/watch?v=vaiBZJR7ao0"}
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>
+                &quot;Gems of Ramanujan and their Lasting Impact on
+                Mathematics&quot;, Ken Ono
+              </h1>
+              <h2 className={subtitle}>Mathematical Association of America</h2>
+            </Link>
+
+            <Link
+              href={"https://www.youtube.com/watch?v=IRfv49wTkfw"}
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>
+                24 Cognitive Biases - Human Misjudgement
+              </h1>
+              <h2 className={subtitle}>Charlie Munger</h2>
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

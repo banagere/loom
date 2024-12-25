@@ -48,6 +48,37 @@ export default function Course() {
               <h1 className={title}>Andy Duncan — Learn Finance C++</h1>
               <h2 className={subtitle}>Basic C++ in finance application</h2>
             </Link>
+
+            <Link
+              href={
+                "https://www.youtube.com/playlist?list=PLA2Lu2TlMqzVPeD043744URgdejZf1vlr"
+              }
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>Quantitative trading strategies</h1>
+              <h2 className={subtitle}>Liu Peng</h2>
+            </Link>
+
+            <Link
+              href={"https://www.youtube.com/watch?v=7S_tz1z_5bA"}
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>SQL Course for Beginners</h1>
+              <h2 className={subtitle}>Programming with Mosh</h2>
+            </Link>
+
+            <Link
+              href={
+                "https://www.youtube.com/playlist?list=PLhQjrBD2T380Xnv_v683p6UjiKJZe13ki"
+              }
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>Harvard — CS50</h1>
+              <h2 className={subtitle}>Learn to code from scratch</h2>
+            </Link>
           </div>
         </div>
       </div>
