@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="flex h-screen">
+        <div className="flex">
           <Sidebar />
 
           <main className="flex-1 px-5 shadow-xl">

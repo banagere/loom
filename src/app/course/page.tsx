@@ -11,30 +11,42 @@ export default function Course() {
       href: "https://www.markmeldrum.com/courses/portfolio-construction-management/",
       title: "Portfolio Construction & Management",
       subtitle: "Mark Meldrum",
+      status: "WIP",
     },
     {
       id: 2,
       href: "https://www.youtube.com/playlist?list=PLLLuxp_C798FgdhHllQ8pvzUv-_D1PhF0",
       title: "Learn Finance C++",
       subtitle: "Andy Duncan",
+      status: "WIP",
     },
     {
       id: 3,
       href: "https://www.youtube.com/playlist?list=PLA2Lu2TlMqzVPeD043744URgdejZf1vlr",
       title: "Quantitative Trading Strategies",
       subtitle: "Liu Peng",
+      status: "NIL",
     },
     {
       id: 4,
       href: "https://www.youtube.com/watch?v=7S_tz1z_5bA",
       title: "SQL Course for Beginners",
       subtitle: "Programming with Mosh",
+      status: "NIL",
     },
     {
       id: 5,
       href: "https://www.youtube.com/playlist?list=PLhQjrBD2T380Xnv_v683p6UjiKJZe13ki",
       title: "CS50",
       subtitle: "Harvard",
+      status: "Done",
+    },
+    {
+      id: 6,
+      href: "https://otexts.com/fpp3/",
+      title: "Forecasting: Principles and Practice",
+      subtitle: "Rob J Hyndman and George Athanasopoulos",
+      status: "NIL",
     },
   ];
 

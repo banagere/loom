@@ -35,13 +35,13 @@ export default function Sidebar() {
     },
   ];
 
-  const items = "hover:bg-neutral-200 px-4 py-1 rounded-lg duration-500";
+  const items = "hover:bg-neutral-200 px-4 py-1 rounded-lg duration-500 hover:shadow-inner";
   // const items =
   //   "flex items-center space-x-3 text-gray-800 hover:text-blue-600 font-medium";
 
   return (
     <>
-      <div className="flex flex-col h-screen w-60 bg-neutral-100 shadow-inner border border-neutral-200">
+      <div className="flex flex-col h-screen w-64 bg-neutral-100 shadow-inner border border-neutral-200">
         <div className="flex items-center px-5 py-4">
           <div className="ml-3">
             <h2 className="font-bold text-2xl">Loom</h2>
