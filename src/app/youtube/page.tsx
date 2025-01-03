@@ -7,7 +7,7 @@ export default function YouTube() {
   const title = "text-lg font-medium flex";
   const subtitle = "text-neutral-600";
 
-  const youtubeList = [
+  const channels = [
     {
       id: 1,
       href: "https://www.youtube.com/@ritvikmath",
@@ -15,7 +15,53 @@ export default function YouTube() {
       subtitle: "Teaches mathematics in a simple way",
       channel: "Ritvik Math",
       type: "channel",
-      status: "WIP",
+    },
+  ];
+
+  const videos = [
+    {
+      id: 1,
+      href: "https://www.youtube.com/watch?v=-k-Yk4Ubhos",
+      title:
+        "One of the biggest wealth transfers in US history is happening RIGHT NOW. Are you aware?",
+      channel: "Alexandra Fasulo",
+      status: "NIL",
+    },
+    {
+      id: 2,
+      href: "https://www.youtube.com/watch?v=k81cDTgyBOQ",
+      title: "Wall Street's Dangerous New Obsession With Farmland",
+      channel: "How Money Works",
+      status: "NIL",
+    },
+    {
+      id: 3,
+      href: "https://www.youtube.com/watch?v=vaiBZJR7ao0",
+      title:
+        "'Gems of Ramanujan and their Lasting Impact on Mathematics', Ken Ono",
+      channel: "Mathematical Association of America",
+      status: "NIL",
+    },
+    {
+      id: 4,
+      href: "https://www.youtube.com/watch?v=IRfv49wTkfw",
+      title: "24 Cognitive Biases - Human Misjudgement",
+      channel: "Charlie Munger",
+      status: "NIL",
+    },
+    {
+      id: 5,
+      href: "https://www.youtube.com/watch?v=8uAW5FQtcvE",
+      title: "Trading at light speed",
+      channel: "David Gross",
+      status: "NIL",
+    },
+    {
+      id: 6,
+      href: "https://www.youtube.com/watch?v=NH1Tta7purM",
+      title: "When a Microsecond Is an Eternity: High Performance Trading Systems in C++",
+      channel: "Carl Cook",
+      status: "NIL",
     },
   ];
 
@@ -35,7 +81,7 @@ export default function YouTube() {
           <h1 className="font-medium text-2xl py-3">Channels</h1>
 
           <div className="flex flex-col gap-5">
-            {youtubeList.map((list) => (
+            {channels.map((list) => (
               <Link
                 href={list.href}
                 className={link}
@@ -53,60 +99,17 @@ export default function YouTube() {
           <h1 className="font-medium text-2xl py-3">Videos</h1>
 
           <div className="flex flex-col gap-5">
-            <Link
-              href={"https://www.youtube.com/watch?v=-k-Yk4Ubhos"}
-              className={link}
-              target="_blank"
-            >
-              <h1 className={title}>
-                One of the biggest wealth transfers in US history is happening
-                RIGHT NOW. Are you aware?
-              </h1>
-              <h2 className={subtitle}>Alexandra Fasulo</h2>
-            </Link>
-
-            <Link
-              href={"https://www.youtube.com/watch?v=k81cDTgyBOQ"}
-              className={link}
-              target="_blank"
-            >
-              <h1 className={title}>
-                Wall Street&apos;s Dangerous New Obsession With Farmland
-              </h1>
-              <h2 className={subtitle}>How Money Works</h2>
-            </Link>
-
-            <Link
-              href={"https://www.youtube.com/watch?v=vaiBZJR7ao0"}
-              className={link}
-              target="_blank"
-            >
-              <h1 className={title}>
-                &quot;Gems of Ramanujan and their Lasting Impact on
-                Mathematics&quot;, Ken Ono
-              </h1>
-              <h2 className={subtitle}>Mathematical Association of America</h2>
-            </Link>
-
-            <Link
-              href={"https://www.youtube.com/watch?v=IRfv49wTkfw"}
-              className={link}
-              target="_blank"
-            >
-              <h1 className={title}>
-                24 Cognitive Biases - Human Misjudgement
-              </h1>
-              <h2 className={subtitle}>Charlie Munger</h2>
-            </Link>
-
-            <Link
-              href={"https://www.youtube.com/watch?v=8uAW5FQtcvE"}
-              className={link}
-              target="_blank"
-            >
-              <h1 className={title}>Trading at light speed</h1>
-              <h2 className={subtitle}>David Gross</h2>
-            </Link>
+            {videos.map((list) => (
+              <Link
+                href={list.href}
+                className={link}
+                target="_blank"
+                key={list.id}
+              >
+                <h1 className={title}>{list.title}</h1>
+                <h2 className={subtitle}>{list.channel}</h2>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
