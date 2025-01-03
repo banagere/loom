@@ -7,6 +7,18 @@ export default function YouTube() {
   const title = "text-lg font-medium flex";
   const subtitle = "text-neutral-600";
 
+  const youtubeList = [
+    {
+      id: 1,
+      href: "https://www.youtube.com/@ritvikmath",
+      title: "ritvikmath",
+      subtitle: "Teaches mathematics in a simple way",
+      channel: "Ritvik Math",
+      type: "channel",
+      status: "WIP",
+    },
+  ];
+
   return (
     <>
       <div className="max-w-2xl mx-auto">
@@ -15,7 +27,7 @@ export default function YouTube() {
             YouTube
           </h1>
           <p className="font-medium text-neutral-700 pt-2">
-            Best platform to gain knowledge
+            Best platform to gain knowledge!
           </p>
         </div>
 
@@ -23,14 +35,17 @@ export default function YouTube() {
           <h1 className="font-medium text-2xl py-3">Channels</h1>
 
           <div className="flex flex-col gap-5">
-            <Link
-              href={"https://www.youtube.com/@ritvikmath"}
-              className={link}
-              target="_blank"
-            >
-              <h1 className={title}>ritvikmath</h1>
-              <h2 className={subtitle}>Teaches mathematics in a simple way</h2>
-            </Link>
+            {youtubeList.map((list) => (
+              <Link
+                href={list.href}
+                className={link}
+                target="_blank"
+                key={list.id}
+              >
+                <h1 className={title}>{list.channel}</h1>
+                <h2 className={subtitle}>{list.subtitle}</h2>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -82,6 +97,15 @@ export default function YouTube() {
                 24 Cognitive Biases - Human Misjudgement
               </h1>
               <h2 className={subtitle}>Charlie Munger</h2>
+            </Link>
+
+            <Link
+              href={"https://www.youtube.com/watch?v=8uAW5FQtcvE"}
+              className={link}
+              target="_blank"
+            >
+              <h1 className={title}>Trading at light speed</h1>
+              <h2 className={subtitle}>David Gross</h2>
             </Link>
           </div>
         </div>
